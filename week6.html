@@ -22,8 +22,32 @@
     </h2>
     <br />
     <h2 style="color: black; text-align: center">
-      <bold>ESP32, POSITIONAL servo motor experiment</bold>
+      <bold>ESP32, POSITIONAL (360) servo motor experiment</bold>
     </h2>
+    <br />
+    <p>
+      <strong>Theory Behind the Experiment:</strong><br />
+      The ESP32, positional (360) servo motor experiment demonstrates how a
+      microcontroller can precisely control the angular position of a servo
+      motor. A positional servo motor receives pulse-width modulation (PWM)
+      signals from the ESP32, which determine the angle to which the motor shaft
+      rotates. By varying the width of the pulses, the ESP32 can set the servo
+      to specific positions within its range, typically up to 360 degrees for
+      full rotation servos.<br /><br />
+      <strong>What the Experiment Entails:</strong><br />
+      - Connecting a positional (360) servo motor to the ESP32’s GPIO pins.<br />
+      - Writing code to generate PWM signals for controlling the servo’s
+      position.<br />
+      - Sending commands from the ESP32 to move the servo to desired angles.<br />
+      - Observing and testing the servo’s response to different PWM values.<br /><br />
+      <strong>Importance in the Real World:</strong><br />
+      This experiment is important because positional servo motors are widely
+      used in robotics, automation, and control systems where precise movement
+      is required. Applications include robotic arms, camera gimbals, and
+      automated mechanisms. Understanding how to control a servo motor with a
+      microcontroller like the ESP32 is fundamental for building interactive
+      devices and systems that require accurate positioning and motion control.
+    </p>
     <br />
     <iframe
       width="560"
@@ -38,6 +62,31 @@
       <bold>ESP32, CONTINUOUS servo motor experiment</bold>
     </h2>
     <br />
+    <p>
+      <strong>Theory Behind the Experiment:</strong><br />
+      The ESP32, continuous servo motor experiment explores how a
+      microcontroller can control the speed and direction of a continuous
+      rotation servo motor. Unlike positional servos, continuous servos rotate
+      indefinitely in either direction. The ESP32 sends pulse-width modulation
+      (PWM) signals to the servo, where the width of the pulse determines both
+      the direction and speed of rotation. Neutral pulses stop the motor, while
+      wider or narrower pulses cause it to rotate clockwise or counterclockwise
+      at varying speeds.<br /><br />
+      <strong>What the Experiment Entails:</strong><br />
+      - Connecting a continuous servo motor to the ESP32’s GPIO pins.<br />
+      - Writing code to generate PWM signals for controlling speed and
+      direction.<br />
+      - Sending commands from the ESP32 to start, stop, and change the rotation
+      of the servo.<br />
+      - Observing and testing the servo’s response to different PWM values.<br /><br />
+      <strong>Importance in the Real World:</strong><br />
+      Continuous servo motors are widely used in robotics, automation, and
+      mobile platforms where continuous movement is needed, such as wheels or
+      conveyor belts. Understanding how to control these motors with a
+      microcontroller like the ESP32 is essential for building robots, automated
+      vehicles, and systems that require variable speed and direction control.
+    </p>
+    <br />
     <iframe
       width="560"
       height="315"
@@ -48,9 +97,34 @@
     ></iframe>
     <hr />
     <h2 style="color: black; text-align: center">
-      <bold>ESP32, CONTINUOUS STEPPED servo motor experiment</bold>
+      <strong>ESP32, CONTINUOUS STEPPED servo motor experiment</strong>
     </h2>
     <br />
+    <p>
+      <strong>Theory Behind the Experiment:</strong><br />
+      The ESP32, continuous stepped servo motor experiment demonstrates how a
+      microcontroller can control a servo motor to move in discrete steps rather
+      than smooth, continuous motion. By sending carefully timed pulse-width
+      modulation (PWM) signals, the ESP32 can command the servo to rotate a
+      fixed amount with each signal, creating a stepped movement effect. This
+      approach is useful for applications that require precise incremental
+      positioning or controlled rotation in stages.<br /><br />
+      <strong>What the Experiment Entails:</strong><br />
+      - Connecting a continuous stepped servo motor to the ESP32’s GPIO pins.<br />
+      - Writing code to generate PWM signals that move the servo in defined
+      steps.<br />
+      - Sending commands from the ESP32 to control the number and size of
+      steps.<br />
+      - Observing and testing the servo’s response to different step
+      commands.<br /><br />
+      <strong>Importance in the Real World:</strong><br />
+      Stepped servo control is important in robotics, automation, and machinery
+      where precise incremental movement is needed, such as in conveyor systems,
+      pick-and-place machines, and camera sliders. Understanding how to
+      implement stepped motion with a microcontroller like the ESP32 enables the
+      creation of devices that require accurate, repeatable positioning and
+      controlled movement for complex tasks.
+    </p>
     <iframe
       width="560"
       height="315"
