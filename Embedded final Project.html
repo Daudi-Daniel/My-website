@@ -11,12 +11,12 @@
     </h1>
     <hr />
 
-    <h2 style="color: darkgreen;">Problem It Solves</h2>
+    <h2 style="text-align: center;color: darkgreen;">Problem It Solves</h2>
     <p>
         Cities like Nairobi face unpredictable water supply to certain neighborhoods, leakages and pressure drops in old pipelines, and poor data on demand and waste detection. There is a need to monitor, balance, and automate water flow control based on real-time demand and pipeline status.
     </p>
 
-    <h2 style="color: darkgreen;">Project Summary</h2>
+    <h2 style="text-align: center;color: darkgreen;">Project Summary</h2>
     <p>
         The SWDB project develops a distributed, embedded Smart Water Monitoring Node that:
         <ul>
@@ -26,18 +26,8 @@
             <li>Communicates data wirelessly to a central dashboard or water utility server.</li>
         </ul>
     </p>
-
-    <h2 style="color: darkgreen;">Core Components</h2>
-    <ul>
-        <li><strong>Microcontroller:</strong> ESP32 or STM32 (powerful and wireless-capable)</li>
-        <li><strong>Water flow sensor:</strong> YF-S201 or industrial turbine flow sensor</li>
-        <li><strong>Pressure sensor:</strong> MPX5010 or industrial piezo sensors</li>
-        <li><strong>Solenoid or motorized valve:</strong> For remote flow regulation</li>
-        <li><strong>Battery + solar panel:</strong> For remote locations</li>
-        <li><strong>LoRa/WiFi/GSM module:</strong> For city-wide communication</li>
-    </ul>
-
-    <h2 style="color: darkgreen;">How It Works</h2>
+    <br />
+    <h2 style="text-align: center;color: darkgreen;">How It Works</h2>
     <ul>
         <li>Install sensor nodes at various junctions or critical points in the pipeline.</li>
         <li>Each node monitors real-time flow rate and pressure before and after.</li>
@@ -45,20 +35,100 @@
         <li>Sends data to a central server/dashboard.</li>
         <li>Optional: Uses data to trigger flow redistribution for balanced supply.</li>
     </ul>
+    <br />
 
-    <h2 style="color: darkgreen;">Impact</h2>
+    <h2 style="text-align: center;color: darkgreen;">Impact</h2>
     <ul>
         <li>Improves water supply reliability across Nairobi zones.</li>
         <li>Enables early leak/burst detection, reducing water loss.</li>
         <li>Supports smart urban planning and water conservation.</li>
         <li>Sets foundation for Smart City infrastructure.</li>
     </ul>
+    <br />
 
-    <h2 style="color: darkgreen;">Future Expansion</h2>
+    <h2 style="text-align: center;color: darkgreen;">Future Expansion</h2>
     <ul>
         <li>AI-based demand prediction using historical data.</li>
         <li>Automated pump control based on tank level and area demand.</li>
         <li>Link with consumer meters for end-to-end flow accountability.</li>
     </ul>
+<hr/>
+<h2 style="text-align: center;color: darkgreen;"> Hardware Components</h2>
+    <ul>
+        <li><strong>Microcontroller Unit:</strong> ESP32 (WiFi + BLE) for urban areas; STM32 + LoRa or Arduino + GSM for remote.</li>
+        <li><strong>Flow Sensor:</strong> YF-S201 or industrial turbine flow sensor (3/4" or 1").</li>
+        <li><strong>Pressure Sensor:</strong> MPX5010 (low-cost) or Honeywell PX2 (industrial).</li>
+        <li><strong>Optional:</strong> Water level sensor for tank monitoring.</li>
+        <li><strong>Actuator:</strong> Motorized ball valve (DC 12V/24V) or solenoid valve, controlled via relay/motor driver.</li>
+        <li><strong>Power:</strong> Solar panel + 18650 battery + charge controller for remote; AC adapter + backup battery for urban.</li>
+        <li><strong>Communication:</strong> WiFi for urban, LoRa for long-range, GSM (SIM800/900) for backup.</li>
+    </ul>
+    <br />
+
+    <h2 style="text-align: center;color: darkgreen;">Software Design</h2>
+    <ul>
+        <li><strong>Embedded Code (ESP32):</strong>
+            <ul>
+                <li>Read pressure and flow sensor data every X seconds.</li>
+                <li>Calculate flow rate (L/min), pressure differential, and detect anomalies (leak = pressure drop + flow).</li>
+                <li>Send data over MQTT or HTTP to a central server.</li>
+                <li>Receive commands to open/close valve if enabled.</li>
+            </ul>
+        </li>
+        <li><strong>Server/Dashboard:</strong>
+            <ul>
+                <li>Node-RED, InfluxDB + Grafana, or Firebase for data visualization.</li>
+                <li>Map-based interface with real-time flow and pressure.</li>
+                <li>Leak alerts and manual/automatic valve control.</li>
+                <li>Historical data for predictive analysis.</li>
+            </ul>
+        </li>
+    </ul>
+    <br />
+
+    <h2 style="text-align: center;color: darkgreen;">Prototype Development Roadmap</h2>
+    <ul>
+        <li><strong>Phase 1: Core Prototype</strong>
+            <ul>
+                <li>Breadboard setup with ESP32, 1 flow sensor, 2 pressure sensors (inlet/outlet).</li>
+                <li>Serial monitor/display to view data.</li>
+            </ul>
+        </li>
+        <li><strong>Phase 2: Communication</strong>
+            <ul>
+                <li>Send sensor data to a local server (Node-RED dashboard).</li>
+                <li>Integrate simple valve control (toggle with button or command).</li>
+            </ul>
+        </li>
+        <li><strong>Phase 3: Automation Logic</strong>
+            <ul>
+                <li>Implement leak detection logic.</li>
+                <li>Auto-close valve on leak or high-pressure anomaly.</li>
+            </ul>
+        </li>
+        <li><strong>Phase 4: Field Test Unit</strong>
+            <ul>
+                <li>Build waterproof node (PVC enclosure).</li>
+                <li>Add solar or mains power.</li>
+                <li>Install in small test setup (home pipeline, water tank system, etc.).</li>
+            </ul>
+        </li>
+        <li><strong>Phase 5: Dashboard and Expansion</strong>
+            <ul>
+                <li>Deploy multiple nodes and monitor flow/pressure in several branches.</li>
+                <li>Use map overlay for municipal setup.</li>
+            </ul>
+        </li>
+    </ul>
+    <br />
+
+    <h2 style="text-align: center;color: darkgreen;">Real-World Integration Ideas</h2>
+    <ul>
+        <li>Partner with Nairobi City Water and Sewerage Company for pilot deployment.</li>
+        <li>Use for community tanks, informal settlement distribution, or new housing developments.</li>
+        <li>Extend to manage pump stations or valve zones across estates.</li>
+    </ul>
+
+
 </body>
 </html>
