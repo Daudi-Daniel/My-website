@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> PRODUCTION SYSTEMS PROJECT</title>
+  </head>
+  <body>
+     <h1 style="text-align: center; color: darkblue">
+      Smart Roll Monitoring and Jam Detection System (SRMJDS)
+    </h1>
+    <hr />
+
+    <h2 style="text-align: center; color: darkgreen">🎯 Problem It Solves</h2>
+    <p>
+      In toilet paper production, roll jams, feed misalignments, or irregular paper tension can cause machine downtime, material wastage, or even damage to cutting and wrapping equipment. Currently, many of these issues are detected manually or too late. The SRMJDS embedded system solves this by providing real-time monitoring and early detection.
+    </p>
+    <br />
+
+    <h2 style="text-align: center; color: darkgreen">💡 Project Summary</h2>
+    <p>
+      The SRMJDS is a compact, low-cost Smart Sensor Module designed using embedded systems to:
+      <ul>
+        <li>Monitor paper feed tension in real-time.</li>
+        <li>Detect roll jams or slowdowns early using vibration and optical sensors.</li>
+        <li>Alert the operator with buzzer/LED or integrate into a dashboard or HMI.</li>
+        <li>Optionally log data over time for predictive maintenance.</li>
+      </ul>
+    </p>
+    <br />
+
+    <h2 style="text-align: center; color: darkgreen">🧰 Core Components</h2>
+    <ul>
+      <li><strong>Microcontroller:</strong> ESP32 or STM32 (WiFi-capable for data logging)</li>
+      <li><strong>Load cell / strain gauge:</strong> For tension measurement</li>
+      <li><strong>IR sensor or rotary encoder:</strong> For monitoring roll movement speed</li>
+      <li><strong>Vibration sensor (ADXL335 or SW-420):</strong> For abnormal vibration/jam detection</li>
+      <li><strong>OLED Display or LED + buzzer:</strong> For local alerts</li>
+      <li><strong>Optional:</strong> SD card module or WiFi/Bluetooth to send logs to a PC/app</li>
+    </ul>
+    <br />
+
+    <h2 style="text-align: center; color: darkgreen"> Impact</h2>
+    <ul>
+      <li>Reduces unplanned machine downtime</li>
+      <li>Minimizes material waste</li>
+      <li>Increases operator response time and machine efficiency</li>
+      <li>Opens the door to future predictive maintenance or IoT integration in your factory</li>
+    </ul>
+    <br />
+
+    <h2 style="text-align: center; color: darkgreen"> Future Improvements</h2>
+    <ul>
+      <li>Add wireless modules (LoRa or WiFi) for a smart factory network</li>
+      <li>Create a dashboard to view real-time data across machines</li>
+      <li>Apply ML models to predict faults before they happen using collected data</li>
+    </ul>
+    <br />
+
+    <h2 style="text-align: center; color: darkgreen">Conclusion</h2>
+    <p>
+      The Smart Roll Monitoring and Jam Detection System (SRMJDS) demonstrates the practical application of embedded systems to solve real-world industrial problems. By integrating sensors, actuators, and intelligent data processing, this project reduces downtime, improves efficiency, and lays the foundation for future smart factory innovations.
+    </p>
+    <hr/>
+   <h1 style="text-align: center; color: darkblue">THE OPERATIONS TO BE FOLLOWED</h1>
+   <h2 style="text-align: center; color: darkgreen">📋 Project Stages</h2>
+<br />
+
+<h3 style="color: darkslateblue">1. Hardware Design</h3>
+<ul>
+  <li>Select and integrate the microcontroller (ESP32 or STM32).</li>
+  <li>Connect load cell/strain gauge for tension measurement.</li>
+  <li>Install IR sensor or rotary encoder for roll speed monitoring.</li>
+  <li>Attach vibration sensor (ADXL335 or SW-420) for jam detection.</li>
+  <li>Set up OLED display, LED, and buzzer for alerts.</li>
+  <li>Optional: Add SD card module or WiFi/Bluetooth for data logging.</li>
+</ul>
+<br />
+
+<h3 style="color: darkslateblue">2. Firmware Development</h3>
+<ul>
+  <li>Write code to read sensor data (analog and digital inputs).</li>
+  <li>Implement algorithms for jam detection and tension monitoring.</li>
+  <li>Program alert logic for buzzer/LED and display updates.</li>
+  <li>Optional: Develop routines for data logging and wireless communication.</li>
+</ul>
+<br />
+
+<h3 style="color: darkslateblue">3. System Integration & Testing</h3>
+<ul>
+  <li>Assemble all hardware components on a test rig or prototype machine.</li>
+  <li>Upload and debug firmware on the microcontroller.</li>
+  <li>Test sensor readings and system response to simulated jams and tension changes.</li>
+  <li>Verify alert mechanisms and data logging functionality.</li>
+</ul>
+<br />
+
+<h3 style="color: darkslateblue">4. Deployment & Evaluation</h3>
+<ul>
+  <li>Install the SRMJDS module on a production machine.</li>
+  <li>Monitor real-world performance and operator feedback.</li>
+  <li>Collect data for predictive maintenance and future improvements.</li>
+</ul>
+<br />
+
+<h3 style="color: darkslateblue">5. Future Improvements</h3>
+<ul>
+  <li>Add wireless modules (LoRa or WiFi) for smart factory networking.</li>
+  <li>Create a dashboard for real-time data visualization across machines.</li>
+  <li>Apply machine learning models for fault prediction using collected data.</li>
+</ul>
+   </body>
+
+</html>
