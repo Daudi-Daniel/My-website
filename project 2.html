@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Pick and Place Robot Project</title>
+</head>
+<body>
+    <h1 style="text-align: center; color: darkblue;">
+        Mobile Pick and Place Robot with Intelligent Sorting and Counting
+    </h1>
+    <hr />
+
+    <h2 style="color: darkgreen;">🎯 Problem Statement</h2>
+    <p>
+        In packaging and distribution environments, products such as 4-packs, 10-packs, and serviettes must be sorted, counted, and stored efficiently. Manual sorting is slow and error-prone. An automated mobile robot can improve accuracy, speed, and inventory management.
+    </p>
+
+    <h2 style="color: darkgreen;">💡 Project Summary</h2>
+    <p>
+        Design and build a mobile pick and place robot that:
+        <ul>
+            <li>Moves along a conveyor or workspace.</li>
+            <li>Identifies and distinguishes between 4-packs, 10-packs, and serviettes using sensors and image processing.</li>
+            <li>Picks each item and places it in the correct storage bin.</li>
+            <li>Maintains a real-time count of each group.</li>
+            <li>Stores count data for inventory and reporting.</li>
+        </ul>
+    </p>
+
+    <h2 style="color: darkgreen;">🧰 Core Components</h2>
+<ul>
+    <li><strong>Mobile Robot Base:</strong> Motorized chassis with wheels and navigation sensors (ultrasonic, IR, or lidar).</li>
+    <li><strong>Pick and Place Arm:</strong> Servo or stepper motor-driven robotic arm with gripper, designed to reach and stack items up to a height of 2.5 metres.</li>
+    <li><strong>Vision System:</strong> Camera module (e.g., OpenMV, Raspberry Pi Camera) for product identification.</li>
+    <li><strong>Microcontroller:</strong> ESP32, Arduino, or Raspberry Pi for control and processing.</li>
+    <li><strong>Storage Bins:</strong> Separate bins for 4-packs, 10-packs, and serviettes, with vertical stacking capability up to 2.5 metres.</li>
+    <li><strong>Display/Interface:</strong> LCD or web dashboard for count monitoring.</li>
+    <li><strong>Power Supply:</strong> Rechargeable battery pack.</li>
+</ul>
+
+    <h2 style="color: darkgreen;">⚙️ How It Works</h2>
+    <ul>
+        <li>Robot navigates to the pick-up area.</li>
+        <li>Vision system scans and analyzes each item.</li>
+        <li>Classification algorithm determines if the item is a 4-pack, 10-pack, or serviette.</li>
+        <li>Robotic arm picks the item and places it in the corresponding bin.</li>
+        <li>Microcontroller updates the count for each group and stores the data.</li>
+        <li>Counts are displayed in real-time and can be exported for inventory management.</li>
+    </ul>
+
+    <h2 style="color: darkgreen;">🚀 Impact</h2>
+    <ul>
+        <li>Reduces manual labor and errors in sorting and counting.</li>
+        <li>Improves efficiency and speed in packaging operations.</li>
+        <li>Provides accurate inventory data for better management.</li>
+        <li>Scalable for different product types and packaging sizes.</li>
+    </ul>
+
+    <h2 style="color: darkgreen;">🛠️ Future Improvements</h2>
+    <ul>
+        <li>Integrate wireless communication for remote monitoring and control.</li>
+        <li>Add machine learning for improved product recognition.</li>
+        <li>Enable automatic bin emptying and restocking alerts.</li>
+        <li>Expand to handle more product categories.</li>
+    </ul>
+</body>
+</html>
